@@ -2,13 +2,9 @@
 
     <body>
 
-        <p></p>
-
-            <script>
-                alert( 'Hello, world!' );
-            </script>
-
-        <p></p>
+        <p>
+            ( 'Hello, world!' );
+        </p>
 
     </body>
 
