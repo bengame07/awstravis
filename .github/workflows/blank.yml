@@ -3,7 +3,7 @@ nom : Déployer
 sur :
    pousser :
      branches :
-      - maître
+      - main
 
 jobs :
    build :
