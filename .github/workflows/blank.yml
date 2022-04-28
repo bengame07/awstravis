@@ -1,17 +1,17 @@
-nom : Déployer
+name: Deploy
 
-sur :
-   pousser :
-     branches :
-      - maître
+on:
+  push:
+    branches:
+      - master
 
-jobs :
-   build :
-     runs-on : ubuntu-latest 
-    steps :
-      - utilise : actions/checkout@v2 
-      - utilise : akhileshns/heroku-deploy@v3.12.12 # Ceci est l'action 
-        avec :
-           heroku_api_key : ${{secrets.HEROKU}} 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key : ${{secrets.HEROKU}} 
           heroku_app_name : "awstravis"  # Doit être unique dans Heroku 
           heroku_email : "benjamin.descombe@ecole-isitech.fr"
