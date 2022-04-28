@@ -3,7 +3,7 @@ nom : Déployer
 sur :
    pousser :
      branches :
-      - main
+      - maître
 
 jobs :
    build :
@@ -12,6 +12,6 @@ jobs :
       - utilise : actions/checkout@v2 
       - utilise : akhileshns/heroku-deploy@v3.12.12 # Ceci est l'action 
         avec :
-           heroku_api_key : ${{54446b8e-c498-4297-a109-3570d8a5b300}} 
+           heroku_api_key : ${{secrets.HEROKU}} 
           heroku_app_name : "awstravis"  # Doit être unique dans Heroku 
           heroku_email : "benjamin.descombe@ecole-isitech.fr"
